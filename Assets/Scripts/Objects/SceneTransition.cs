@@ -5,9 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class SceneTransition : MonoBehaviour
 {
+    [Header("New Scene Variables")]
     public string m_sceneToLoad;
     public Vector2 m_playerPosition;
     public Vector2Value m_playerReturnPosition;
+    public Vector2 m_cameraNewMax;
+    public Vector2 m_cameraNewMin;
+    public Vector2Value m_cameraMax;
+    public Vector2Value m_cameraMin;
+
+    [Header("Transition Variables")]
     public GameObject m_fadeInPanel;
     public GameObject m_fadeOutPanel;
     public float m_fadeWait;
@@ -38,11 +45,17 @@ public class SceneTransition : MonoBehaviour
             Instantiate(m_fadeOutPanel, Vector3.zero, Quaternion.identity);
         }
         yield return new WaitForSeconds(m_fadeWait);
-        //AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(m_sceneToLoad);
-        //while (!asyncOperation.isDone)
-        //{
-        //    yield return null;
-        //}
-        SceneManager.LoadScene(m_sceneToLoad);
+        ResetCameraBounds();
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(m_sceneToLoad);
+        while (!asyncOperation.isDone)
+        {
+            yield return null;
+        }
+    }
+
+    public void ResetCameraBounds()
+    {
+        m_cameraMax.m_runtimeValue = m_cameraNewMax;
+        m_cameraMin.m_runtimeValue = m_cameraNewMin;
     }
 }

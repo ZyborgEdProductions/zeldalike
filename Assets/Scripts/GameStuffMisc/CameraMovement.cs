@@ -4,17 +4,27 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
+    [Header("Position Variables")]
     public Transform m_target;
     public float m_smoothing;
     public Vector2 m_maxPos;
     public Vector2 m_minPos;
-    public bool m_justOnce;
 
+    [Header("Animator")]
     public Animator m_animator;
+
+    [Header("Position Reset")]
+    public Vector2Value m_cameraMax;
+    public Vector2Value m_cameraMin;
+
+    [Header("Added by me - not in tutorial")]
+    public bool m_justOnce;
 
     // Start is called before the first frame update
     void Start()
     {
+        m_maxPos = m_cameraMax.m_runtimeValue;
+        m_minPos = m_cameraMin.m_runtimeValue;
         m_justOnce = false;
         m_animator = GetComponent<Animator>();
     }

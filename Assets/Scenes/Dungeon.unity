@@ -12098,6 +12098,14 @@ PrefabInstance:
       value: 0.33333
       objectReference: {fileID: 0}
     - target: {fileID: 1113339804, guid: 980b9bedac766c04b93e938bd55f03c6, type: 3}
+      propertyPath: m_cameraMax
+      value: 
+      objectReference: {fileID: 11400000, guid: e82f9e7dc6f3f3b4cbc2194875f05dba, type: 2}
+    - target: {fileID: 1113339804, guid: 980b9bedac766c04b93e938bd55f03c6, type: 3}
+      propertyPath: m_cameraMin
+      value: 
+      objectReference: {fileID: 11400000, guid: 28a59a99bf3d20c4d8d3d252a64f4859, type: 2}
+    - target: {fileID: 1113339804, guid: 980b9bedac766c04b93e938bd55f03c6, type: 3}
       propertyPath: m_fadeInPanel
       value: 
       objectReference: {fileID: 5370320776445322614, guid: ca54f71d35b574647982ab1707163fe1, type: 3}
@@ -12106,12 +12114,28 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6759651577819101033, guid: 5d4f08254baad0a4cab2f37137217487, type: 3}
     - target: {fileID: 1113339804, guid: 980b9bedac766c04b93e938bd55f03c6, type: 3}
+      propertyPath: m_cameraNewMax.x
+      value: 14.3318
+      objectReference: {fileID: 0}
+    - target: {fileID: 1113339804, guid: 980b9bedac766c04b93e938bd55f03c6, type: 3}
+      propertyPath: m_cameraNewMax.y
+      value: -31
+      objectReference: {fileID: 0}
+    - target: {fileID: 1113339804, guid: 980b9bedac766c04b93e938bd55f03c6, type: 3}
+      propertyPath: m_cameraNewMin.x
+      value: 10.672
+      objectReference: {fileID: 0}
+    - target: {fileID: 1113339804, guid: 980b9bedac766c04b93e938bd55f03c6, type: 3}
+      propertyPath: m_cameraNewMin.y
+      value: -44
+      objectReference: {fileID: 0}
+    - target: {fileID: 1113339804, guid: 980b9bedac766c04b93e938bd55f03c6, type: 3}
       propertyPath: m_playerPosition.x
-      value: 5.5
+      value: 12.5
       objectReference: {fileID: 0}
     - target: {fileID: 1113339804, guid: 980b9bedac766c04b93e938bd55f03c6, type: 3}
       propertyPath: m_playerPosition.y
-      value: -7.5
+      value: -29.5
       objectReference: {fileID: 0}
     - target: {fileID: 1113339804, guid: 980b9bedac766c04b93e938bd55f03c6, type: 3}
       propertyPath: m_playerReturnPosition
@@ -12779,6 +12803,9 @@ MonoBehaviour:
   m_smoothing: 0.05
   m_maxPos: {x: 8.5, y: -6}
   m_minPos: {x: 8.5, y: -6}
+  m_animator: {fileID: 0}
+  m_cameraMax: {fileID: 11400000, guid: 6609064614baaeb49b19efde61588367, type: 2}
+  m_cameraMin: {fileID: 11400000, guid: 6f697b29ed621124ebb6ebeadba1cc60, type: 2}
   m_justOnce: 0
 --- !u!1 &1768226556
 GameObject:
