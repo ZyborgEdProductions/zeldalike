@@ -4,18 +4,29 @@ using UnityEngine;
 
 public class Chest : Interactable
 {
+    [Header("Contents")]
     public Item m_contents;
     public Inventory m_playerInventory;
     public bool m_isOpen;
+    public FloatValue m_storedOpenBoofloat; // Using a float here because bool serialization seems to be nitpicky (and thus buggy unless you figure it out).
+
+    [Header("Signals and Dialog")]
     public SignalObj m_raiseItem;
     public GameObject m_dialogBox;
     public UnityEngine.UI.Text m_dialogText;
+
+    [Header("Animation")]
     public Animator m_animator;
 
     // Start is called before the first frame update
     void Start()
     {
         m_animator = GetComponent<Animator>();
+        m_isOpen = (m_storedOpenBoofloat.RuntimeValue > 0.5f);
+        if(m_isOpen)
+        {
+            m_animator.Play("open", 0, 1.0f);
+        }
     }
 
     // Update is called once per frame
@@ -51,6 +62,7 @@ public class Chest : Interactable
         m_contextOff.Raise();
         // set the chest to opened
         m_isOpen = true;
+        m_storedOpenBoofloat.RuntimeValue = 1.0f;   // 1.0f means "Open"/true  (and 0.0f means "Closed"/false)
         m_animator.SetBool("opened", true);
     }
 

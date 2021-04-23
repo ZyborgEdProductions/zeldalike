@@ -5,10 +5,13 @@ using UnityEngine;
 public class Log : Enemy
 {
     protected Rigidbody2D m_rigidbody;
+    [Header("Target Variables")]
     public Transform m_target;
     public float m_chaseRadius;
     public float m_attackRadius;
     public Transform m_homePosition;
+
+    [Header("Animator")]
     public Animator m_animator;
 
     protected void LogInit()
@@ -54,7 +57,7 @@ public class Log : Enemy
             m_animator.SetBool("wakeUp", false);
         }
     }
-    private void SetAnimFloat(float x, float y)
+    protected void SetAnimFloat(float x, float y)
     {
         m_animator.SetFloat("moveX", x);
         m_animator.SetFloat("moveY", y);
@@ -86,7 +89,7 @@ public class Log : Enemy
         }
     }
 
-    private void ChangeState(EnemyState newState)
+    protected void ChangeState(EnemyState newState)
     {
         if(m_currentState != newState)
         {

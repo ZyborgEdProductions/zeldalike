@@ -6913,6 +6913,14 @@ PrefabInstance:
       value: 0.33333
       objectReference: {fileID: 0}
     - target: {fileID: 1113339804, guid: 980b9bedac766c04b93e938bd55f03c6, type: 3}
+      propertyPath: m_cameraMax
+      value: 
+      objectReference: {fileID: 11400000, guid: 32bd0c76962f93441b54db1f92c73e2a, type: 2}
+    - target: {fileID: 1113339804, guid: 980b9bedac766c04b93e938bd55f03c6, type: 3}
+      propertyPath: m_cameraMin
+      value: 
+      objectReference: {fileID: 11400000, guid: e00a3462cb508f845967773ac6549a73, type: 2}
+    - target: {fileID: 1113339804, guid: 980b9bedac766c04b93e938bd55f03c6, type: 3}
       propertyPath: m_fadeInPanel
       value: 
       objectReference: {fileID: 5370320776445322614, guid: ca54f71d35b574647982ab1707163fe1, type: 3}
@@ -6920,6 +6928,22 @@ PrefabInstance:
       propertyPath: m_fadeOutPanel
       value: 
       objectReference: {fileID: 6759651577819101033, guid: 5d4f08254baad0a4cab2f37137217487, type: 3}
+    - target: {fileID: 1113339804, guid: 980b9bedac766c04b93e938bd55f03c6, type: 3}
+      propertyPath: m_cameraNewMax.x
+      value: 14.334
+      objectReference: {fileID: 0}
+    - target: {fileID: 1113339804, guid: 980b9bedac766c04b93e938bd55f03c6, type: 3}
+      propertyPath: m_cameraNewMax.y
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1113339804, guid: 980b9bedac766c04b93e938bd55f03c6, type: 3}
+      propertyPath: m_cameraNewMin.x
+      value: 10.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 1113339804, guid: 980b9bedac766c04b93e938bd55f03c6, type: 3}
+      propertyPath: m_cameraNewMin.y
+      value: -19
+      objectReference: {fileID: 0}
     - target: {fileID: 1113339804, guid: 980b9bedac766c04b93e938bd55f03c6, type: 3}
       propertyPath: m_playerPosition
       value: 
@@ -6982,7 +7006,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8313105601083425870, guid: 980b9bedac766c04b93e938bd55f03c6, type: 3}
       propertyPath: m_Name
-      value: Scene Transition
+      value: Overworld Transition
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 980b9bedac766c04b93e938bd55f03c6, type: 3}
