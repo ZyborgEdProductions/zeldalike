@@ -19376,6 +19376,10 @@ PrefabInstance:
       value: Door and Switch
       objectReference: {fileID: 0}
     - target: {fileID: 8187767624350746863, guid: 77d9e87a913b139418b6a332fa05eb76, type: 3}
+      propertyPath: m_storedValue
+      value: 
+      objectReference: {fileID: 11400000, guid: 70555cc1585c4ee4793a4b8bbc45ddc6, type: 2}
+    - target: {fileID: 8187767624350746863, guid: 77d9e87a913b139418b6a332fa05eb76, type: 3}
       propertyPath: m_storedValueBoofloat
       value: 
       objectReference: {fileID: 11400000, guid: 70555cc1585c4ee4793a4b8bbc45ddc6, type: 2}

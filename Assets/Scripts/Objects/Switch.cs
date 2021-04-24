@@ -5,7 +5,7 @@ using UnityEngine;
 public class Switch : MonoBehaviour
 {
     public bool m_isActive;
-    public FloatValue m_storedValueBoofloat;
+    public BoolValue m_storedValue;
     public Sprite m_activatedSprite;
     private SpriteRenderer m_currentSprite;
     public Door m_door;
@@ -14,7 +14,7 @@ public class Switch : MonoBehaviour
     void Start()
     {
         m_currentSprite = GetComponent<SpriteRenderer>();
-        m_isActive = (m_storedValueBoofloat.RuntimeValue > 0.5f);
+        m_isActive = m_storedValue.RuntimeValue;
         if (m_isActive)
         {
             ActivateSwitch();
@@ -24,7 +24,7 @@ public class Switch : MonoBehaviour
     public void ActivateSwitch()
     {
         m_isActive = true;
-        m_storedValueBoofloat.RuntimeValue = 1.0f;
+        m_storedValue.RuntimeValue = true;
         m_door.Open();
         m_currentSprite.sprite = m_activatedSprite;
     }

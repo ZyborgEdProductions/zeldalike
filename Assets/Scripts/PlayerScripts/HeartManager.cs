@@ -30,6 +30,7 @@ public class HeartManager : MonoBehaviour
             m_hearts[i].gameObject.SetActive(true);
             m_hearts[i].sprite = m_fullHeart;
         }
+        UpdateHearts();
     }
 
     public void UpdateHearts()

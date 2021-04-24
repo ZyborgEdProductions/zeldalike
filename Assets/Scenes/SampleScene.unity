@@ -51304,7 +51304,7 @@ MonoBehaviour:
   m_contents: {fileID: 11400000, guid: 73fce94e5d47a18449aa9e2a1a279354, type: 2}
   m_playerInventory: {fileID: 11400000, guid: dcb68ab81cbcc3a498925f98306ab757, type: 2}
   m_isOpen: 0
-  m_storedOpenBoofloat: {fileID: 11400000, guid: c65b01ddee0a31b4283fc064e34168bf, type: 2}
+  m_storedOpen: {fileID: 11400000, guid: c65b01ddee0a31b4283fc064e34168bf, type: 2}
   m_raiseItem: {fileID: 11400000, guid: 4d7cb928f199feb4d9ccc2d1489bdb0a, type: 2}
   m_dialogBox: {fileID: 648553414}
   m_dialogText: {fileID: 843031331}
@@ -63230,6 +63230,55 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 938f72ef600dcf242b435744d584adb3, type: 3}
+--- !u!1 &1752284258
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1752284260}
+  - component: {fileID: 1752284259}
+  m_Layer: 0
+  m_Name: GameSaveManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1752284259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752284258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f205802043bb3e4b83c577e4ab3b8e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_objects:
+  - {fileID: 11400000, guid: c65b01ddee0a31b4283fc064e34168bf, type: 2}
+  - {fileID: 11400000, guid: 70555cc1585c4ee4793a4b8bbc45ddc6, type: 2}
+  - {fileID: 11400000, guid: 0ab294d29ea9b084db1185d214e4860a, type: 2}
+  - {fileID: 11400000, guid: 1d70091ca3c6a964b820034c2aaea49c, type: 2}
+  - {fileID: 11400000, guid: dcb68ab81cbcc3a498925f98306ab757, type: 2}
+--- !u!4 &1752284260
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752284258}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.576053, y: -4.5210853, z: -34.906303}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1816370638 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6976492772921124228, guid: 938f72ef600dcf242b435744d584adb3, type: 3}
