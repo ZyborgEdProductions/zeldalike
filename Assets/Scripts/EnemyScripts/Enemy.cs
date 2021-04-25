@@ -26,6 +26,7 @@ public class Enemy : MonoBehaviour
     [Header("Death Effects")]
     public GameObject m_deathEffect;
     private const float m_deathEffectDelay = 1.0f;
+    public SignalObj m_deathSignal;
 
     // Start is called before the first frame update
     void Awake()
@@ -54,6 +55,10 @@ public class Enemy : MonoBehaviour
         {
             DeathEffect();
             this.gameObject.SetActive(false);
+            if(m_deathSignal != null)
+            {
+                m_deathSignal.Raise();
+            }
         }
     }
 

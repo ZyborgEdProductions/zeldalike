@@ -52,9 +52,13 @@ public class Door : Interactable
         m_boxCollider.enabled = false;
     }
 
-    public void Close()
+    public void Close(bool closeAllDoorTypes = false)
     {
-
+        if(closeAllDoorTypes || m_doorType == DoorType.enemy)
+        {
+            m_doorSprite.enabled = true;
+            m_isOpen = false;
+            m_boxCollider.enabled = true;
+        }
     }
-
 }
