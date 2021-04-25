@@ -21,6 +21,7 @@ public class Enemy : MonoBehaviour
     public string m_name;
     public int m_baseAttack;
     public float m_moveSpeed;
+    private Vector2 m_homePosition;
 
     [Header("Death Effects")]
     public GameObject m_deathEffect;
@@ -30,6 +31,15 @@ public class Enemy : MonoBehaviour
     void Awake()
     {
         m_health = m_maxHealth.RuntimeValue;
+        m_homePosition = transform.position;
+    }
+
+    protected virtual void OnEnable()
+    {
+        transform.position = m_homePosition;
+        m_health = m_maxHealth.m_initialValue;
+        //transform.Rotate(0f, 0f, 45f);
+        //transform.localScale = new Vector2(2f, 2f);
     }
 
     // Update is called once per frame

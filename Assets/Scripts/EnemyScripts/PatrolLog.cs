@@ -16,6 +16,13 @@ public class PatrolLog : Log
         m_currentGoal = m_path[0];
     }
 
+    protected override void OnEnable()
+    {
+        base.OnEnable();
+        m_animator.SetBool("wakeUp", true);
+        //m_currentState = EnemyState.walk;
+    }
+
     // Update is called once per frame
     void Update()
     {

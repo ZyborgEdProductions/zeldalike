@@ -9,7 +9,6 @@ public class Log : Enemy
     public Transform m_target;
     public float m_chaseRadius;
     public float m_attackRadius;
-    public Transform m_homePosition;
 
     [Header("Animator")]
     public Animator m_animator;
@@ -20,13 +19,19 @@ public class Log : Enemy
         m_rigidbody = GetComponent<Rigidbody2D>();
         m_animator = GetComponent<Animator>();
         m_target = GameObject.FindWithTag("Player").transform;
-        m_animator.SetBool("wakeUp", true);
+        //m_animator.SetBool("wakeUp", true);
     }
 
     // Start is called before the first frame update
     void Start()
     {
+    }
+
+    protected override void OnEnable()
+    {
+        base.OnEnable();
         LogInit();
+        m_currentState = EnemyState.idle;
     }
 
     // Update is called once per frame
